@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-image: url('background1.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .signup-box {
+            background-color: white;
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            text-align: center;
+            width: 300px;
+        }
+
+        .signup-box h2 {
+            color: black;
+            margin-bottom: 20px;
+        }
+
+        .signup-box input[type="text"],
+        .signup-box input[type="email"],
+        .signup-box input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            background: white;
+        }
+
+        .signup-box input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .signup-box input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .signup-box a {
+            color: black;
+            text-decoration: none;
+            display: block;
+            margin-top: 10px;
+        }
+
+        .signup-box a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+ <body>
+ <center>
+        <nav>
+            <a href="Home.html">Home</a> | 
+            <a href="Desain.pdf">Download Materi</a> | 
+            <a href="Contact.html">Contact</a> |
+            <a href="About.html">About</a> |
+            <a href="Study.html">Study</a> |
+            <a href="login.html">Login</a> |
+            <a href="sign.html">Daftar</a>
+        </nav>
+    <div class="signup-box">
+        <h2>Daftar Dulu</h2>
+        <form action="/signup" method="POST">
+            <input type="text" placeholder="Username" name="username" required>
+            <input type="email" placeholder="Email" name="email" required>
+            <input type="password" placeholder="Password" name="password" required>
+            <input type="password" placeholder="Confirm Password" name="confirm_password" required>
+            <input type="submit" value="Sign Up">
+        </form>
+        <em>
+        <a href="login.html">Kalo udah punya akun klik disini.</a>
+        </em>
+    </div>
+
+</body>
+</html>

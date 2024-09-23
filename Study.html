@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Penerimaan Siswa Baru TA 2024</title>
+    <style>
+        label {
+            width: 150px;
+            margin-right: 10px;
+            display: inline-block;
+        }
+        input {
+            width: 300px;
+        }
+        .form-group {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        button {
+            margin: 10px 5px;
+        }
+    </style>
+</head>
+<body>
+       <nav>
+         <b>
+            <a href="Home.html">Home</a> | 
+            <a href="Desain.pdf">Download Materi</a> | 
+            <a href="Contact.html">Contact</a> |
+            <a href="About.html">About</a> |
+            <a href="Study.html">Study</a> |
+            <a href="login.html">Login</a> |
+            <a href="sign.html">Daftar</a>
+        </b>
+        </nav>
+    <h2>Penerimaan Siswa Baru TA 2024</h2>
+    <form id="formPendaftaran">
+        <h3>Data Siswa</h3>
+        <div class="form-group">
+            <label for="nama">Nama:</label>
+            <input type="text" id="nama" name="nama" required>
+        </div>
+        <div class="form-group">
+            <label for="kelas">Kelas:</label>
+            <input type="text" id="kelas" name="kelas" required>
+        </div>
+        <div class="form-group">
+            <label for="jurusan">Jurusan:</label>
+            <input type="text" id="jurusan" name="jurusan" required>
+        </div>
+        <div class="form-group">
+            <label for="asalSekolah">Asal Sekolah:</label>
+            <input type="text" id="asalSekolah" name="asalSekolah" required>
+        </div>
+        <div class="form-group">
+            <label for="alamat">Alamat:</label>
+            <input type="text" id="alamat" name="alamat" required>
+        </div>
+        <div class="form-group">
+            <label for="kecamatan">Kecamatan:</label>
+            <input type="text" id="kecamatan" name="kecamatan" required>
+        </div>
+        <div class="form-group">
+            <label for="kabupaten">Kabupaten:</label>
+            <input type="text" id="kabupaten" name="kabupaten" required>
+        </div>
+        <div class="form-group">
+            <label for="provinsi">Provinsi:</label>
+            <input type="text" id="provinsi" name="provinsi" required>
+        </div>
+        <div class="form-group">
+            <label for="negara">Negara:</label>
+            <input type="text" id="negara" name="negara" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="tanggalLahir">Tanggal Lahir:</label>
+            <input type="date" id="tanggalLahir" name="tanggalLahir" required>
+        </div>
+        <div class="form-group">
+            <label for="noHp">No. HP:</label>
+            <input type="tel" id="noHp" name="noHp" required>
+        </div>
+
+        <h3>Data Orang Tua</h3>
+        <div class="form-group">
+            <label for="namaIbu">Nama Ibu:</label>
+            <input type="text" id="namaIbu" name="namaIbu" required>
+        </div>
+        <div class="form-group">
+            <label for="namaAyah">Nama Ayah:</label>
+            <input type="text" id="namaAyah" name="namaAyah" required>
+        </div>
+        <div class="form-group">
+            <label for="alamatOrtu">Alamat Orang Tua:</label>
+            <input type="text" id="alamatOrtu" name="alamatOrtu" required>
+        </div>
+        <button type="button" onclick="simpan()">Simpan</button>
+        <button type="reset">Batal</button>
+    </form>
+
+    <script>
+        function simpan() {
+            const form = document.getElementById("formPendaftaran");
+            const formData = new FormData(form);
+            let data = {};
+            formData.forEach((value, key) => {
+                data[key] = value;
+            });
+            alert("Data berhasil disimpan:\n" + JSON.stringify(data, null, 2));
+        }
+    </script>
+</body>
+</html>

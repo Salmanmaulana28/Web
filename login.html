@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-image: url('background1.jpg');
+            background-size: cover;
+            background-position: center;
+            background-color: black;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login-box {
+            background-color: white;
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            text-align: center;
+            width: 300px;
+        }
+
+        .login-box h2 {
+            color: Black;
+            margin-bottom: 20px;
+        }
+
+        .login-box input[type="text"],
+        .login-box input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            background: white;
+        }
+
+        .login-box input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .login-box input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .login-box a {
+            color: black;
+            text-decoration: none;
+            display: block;
+            margin-top: 10px;
+        }
+
+        .login-box a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+<center>
+<nav>
+    <a href="home.html">Home</a>
+    <a href="download.html">Download Materi</a>
+    <a href="contact.html">Contact</a>
+    <a href="about.html">About</a>
+    <a href="study.html">Study</a>
+    <a href="login.html">Login</a> |
+    <a href="sign.html">Daftar</a>
+</nav>
+
+    <div class="login-box">
+        <h2>Masukan Akun</h2>
+        <form action="/login" method="POST">
+            <input type="text" placeholder="Username" name="username" required>
+            <input type="password" placeholder="Password" name="password" required>
+            <input type="submit" value="Login">
+        </form>
+      <em>
+        <a href="sign.html">Belum punya akun? Daftar</a>
+      </em>
+    </div>
+
+</body>
+</html>
